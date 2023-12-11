@@ -14,6 +14,13 @@ class TodoListExample extends HTMLElement {
     this.inputBox = this.shadowRoot.querySelector("inputBox");
     this.itemButton = this.shadowRoot.querySelector("itemButton");
     this.itemList = this.shadowRoot.querySelector("itemList");
+
+    ///add event Listener
+    console.log("button clicked");
+    const list = document.createElement("li");
+    list.textContent = this.inputBox.value;
+    this.itemList.appendChild(list);
+    this.inputBox.value = "";
   }
 }
-customElements.define("todolist-example", TodoListExmple);
+customElements.define("todolist-example", TodoListExample);
